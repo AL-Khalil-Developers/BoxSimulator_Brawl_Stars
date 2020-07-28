@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/brawlers">
+
+    <ImageView
+        android:id="@+id/scells"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.3"
+        android:background="@drawable/scells"
+        android:visibility="invisible" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/fos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/rotate"
+                android:layout_width="600dp"
+                android:layout_height="600dp"
+                android:layout_gravity="center"
+                android:alpha="0.6"
+                android:background="@drawable/upgrade_rotation"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/brawlerstop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:background="@drawable/back_to_home" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/coins"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="120dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/coin_two"
+        android:gravity="center"
+        android:text="20"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        app:fontFamily="@font/fontsbrawl" />
+
+    <ImageView
+        android:id="@+id/home"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/home" />
+
+    <RelativeLayout
+        android:id="@+id/brawler_lay"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:layout_toLeftOf="@+id/info_lay"
+        android:layout_toRightOf="@+id/rare">
+
+        <ImageView
+            android:id="@+id/shaddow"
+            android:layout_width="170dp"
+            android:layout_height="140dp"
+            android:layout_below="@+id/drawable"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-80dp"
+            android:background="@drawable/shaddow"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/drawable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/locker"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/locker"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="-3dp"
+        android:fontFamily="@font/fontsbrawl"
+        android:gravity="top"
+        android:shadowColor="@android:color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:text="Brawlers "
+        android:textColor="@android:color/white"
+        android:textSize="30dp" />
+
+    <RelativeLayout
+        android:id="@+id/rare"
+        android:layout_width="200dp"
+        android:layout_height="77dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="70dp">
+
+        <ImageView
+            android:id="@+id/rare_step"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:background="@drawable/new_lvl_line" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="-5dp"
+            android:layout_marginRight="40dp"
+            android:fontFamily="@font/fontsbrawl"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp"
+            android:rotation="-5"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="2"
+            android:text="SHELLY"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/rare_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/fontsbrawl"
+            android:rotation="-2"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="2"
+            android:text="TROPHY ROAD REWARD"
+            android:textColor="@color/free" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/lvl"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="45dp"
+        android:background="@drawable/new_power"
+        android:fontFamily="@font/fontsbrawl"
+        android:gravity="center"
+        android:text="POWER 7"
+        android:textColor="@android:color/white" />
+
+    <ImageView
+        android:id="@+id/power_star"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/lvl"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="68dp"
+        android:alpha="0.9"
+        android:background="@drawable/stars" />
+
+    <ImageView
+        android:id="@+id/gadget"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/lvl"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/power_star"
+        android:alpha="0.9"
+        android:background="@drawable/locked_gadget" />
+
+    <TextView
+        android:id="@+id/block"
+        android:layout_width="160dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/rare"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/blocked"
+        android:fontFamily="@font/fontsbrawl"
+        android:gravity="center"
+        android:paddingRight="20dp"
+        android:text="Unlock Brawlers\10 from Brawl Boxes"
+        android:textColor="@android:color/white"
+        android:textSize="10sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/block"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/fontsbrawl"
+        android:gravity="left"
+        android:shadowColor="@android:color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:text="Shelly&apos;s spread-fire shotgun blasts the other team with buckshot. Her Super destroys cover and keeps her opponents at a distance!"
+        android:textColor="#ffc0beb1"
+        android:textSize="11sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/select"
+        android:layout_width="75dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/text"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/new_select"
+        android:fontFamily="@font/fontsbrawl"
+        android:gravity="center"
+        android:paddingBottom="3dp"
+        android:shadowColor="@android:color/black"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:text="SELECT"
+        android:textColor="@color/text_play" />
+
+    <RelativeLayout
+        android:id="@+id/info_lay"
+        android:layout_width="200dp"
+        android:layout_height="220dp"
+        android:layout_below="@+id/lvl"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="45dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/new_stat">
+
+        <ImageView
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:background="@drawable/new_stat_top" />
+
+        <LinearLayout
+            android:id="@+id/att_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="54dp"
+            android:layout_marginTop="39dp">
+
+            <ImageView
+                android:id="@+id/attack_one"
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:background="@drawable/atack_one" />
+
+            <ImageView
+                android:id="@+id/attack_two"
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="-4.5dp"
+                android:background="@drawable/atack_one" />
+
+            <ImageView
+                android:id="@+id/attack_three"
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="-4.5dp"
+                android:background="@drawable/atack_one" />
+
+            <ImageView
+                android:id="@+id/attack_fourth"
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="-4.5dp"
+                android:background="@drawable/atack_one" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/health_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="54dp"
+            android:layout_marginTop="80.5dp">
+
+            <ImageView
+                android:id="@+id/health_one"
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:background="@drawable/health_one" />
+
+            <ImageView
+                android:id="@+id/health_two"
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="-4.5dp"
+                android:background="@drawable/health_one" />
+
+            <ImageView
+                android:id="@+id/health_three"
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="-4.5dp"
+                android:background="@drawable/health_one" />
+
+            <ImageView
+                android:id="@+id/health_four"
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="-4.5dp"
+                android:background="@drawable/health_one" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/super_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="51dp"
+            android:layout_marginTop="120.8dp">
+
+            <ImageView
+                android:id="@+id/super_one"
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:background="@drawable/super_one" />
+
+            <ImageView
+                android:id="@+id/super_two"
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="-4.5dp"
+                android:background="@drawable/super_one" />
+
+            <ImageView
+                android:id="@+id/super_three"
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="-4.5dp"
+                android:background="@drawable/super_one" />
+
+            <ImageView
+                android:id="@+id/super_fourth"
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="-4.5dp"
+                android:background="@drawable/super_one" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/attack_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="59dp"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/fontsbrawl"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="2"
+            android:text="ATTACK"
+            android:textColor="@color/attack"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/health_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="59dp"
+            android:layout_marginTop="59.5dp"
+            android:fontFamily="@font/fontsbrawl"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="2"
+            android:text="HEALTH"
+            android:textColor="@color/health"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/super_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="59dp"
+            android:layout_marginTop="100dp"
+            android:fontFamily="@font/fontsbrawl"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="2"
+            android:text="SUPER"
+            android:textColor="@color/superr"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/count_bottom"
+            android:layout_width="120dp"
+            android:layout_height="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="43dp"
+            android:background="@drawable/have_at_the_moment"
+            android:fontFamily="@font/fontsbrawl"
+            android:gravity="center"
+            android:paddingBottom="3dp"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="1"
+            android:textColor="@android:color/white"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/upgrade_line"
+            android:layout_width="20dp"
+            android:layout_height="17.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginBottom="47dp"
+            android:background="@drawable/upgrade_line"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="120dp"
+            android:layout_height="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="43dp"
+            android:background="@drawable/have_at_the_moment_top"
+            android:fontFamily="@font/fontsbrawl"
+            android:gravity="center"
+            android:paddingBottom="3dp"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="1"
+            android:textColor="@android:color/white"
+            android:textSize="13sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="4dp">
+
+            <Button
+                android:id="@+id/upgrade"
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/upgrade_new"
+                android:fontFamily="@font/fontsbrawl"
+                android:gravity="top|center_vertical|center_horizontal|center"
+                android:paddingTop="1dp"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:shadowRadius="1"
+                android:text="UPGRADE TO POWER LEVEL 2"
+                android:textColor="@android:color/white"
+                android:textSize="6sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/need_coins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="11dp"
+            android:fontFamily="@font/fontsbrawl"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="1"
+            android:text="80 "
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/full_info"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/attack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="62dp"
+            android:layout_marginTop="36dp"
+            android:fontFamily="@font/fontsbrawl"
+            android:gravity="center_vertical"
+            android:text="300"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/health"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="62dp"
+            android:layout_marginTop="78dp"
+            android:fontFamily="@font/fontsbrawl"
+            android:gravity="center_vertical"
+            android:text="300"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/supers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="59dp"
+            android:layout_marginTop="119dp"
+            android:fontFamily="@font/fontsbrawl"
+            android:gravity="center_vertical"
+            android:text="300"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/arrow_left"
+        android:layout_width="25dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/brawler_lay"
+        android:background="@drawable/arrow" />
+
+    <ImageButton
+        android:id="@+id/arrow_right"
+        android:layout_width="25dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/info_lay"
+        android:background="@drawable/arrow"
+        android:rotation="180" />
+</RelativeLayout>

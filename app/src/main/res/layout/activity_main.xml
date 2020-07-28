@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/brawlers"
+    android:orientation="vertical">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/fone_gif"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.175" />
+
+    <ImageView
+        android:id="@+id/scells"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.3"
+        android:background="@drawable/scells"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/play"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginRight="64dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/new_select"
+        android:fontFamily="@font/fontsbrawl"
+        android:gravity="center"
+        android:paddingBottom="4dp"
+        android:shadowColor="@android:color/black"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:text="MINI-GAME"
+        android:textColor="@color/text_play"
+        android:textSize="26sp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rete_card"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="16dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/info_about2" />
+
+            <TextView
+                android:id="@+id/click_click"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="6dp"
+                android:layout_marginBottom="6dp"
+                android:fontFamily="@font/fontsbrawl"
+                android:gravity="bottom|left|center_vertical|center_horizontal|center"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:text="Click Click! "
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/te"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="6dp"
+                android:fontFamily="@font/fontsbrawl"
+                android:gravity="left|center_vertical|center_horizontal|center"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:text="Like The Game? "
+                android:textColor="@android:color/white"
+                android:textSize="25sp" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/din"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="-6dp"
+                android:layout_marginBottom="6dp" />
+
+            <ImageView
+                android:id="@+id/finger"
+                android:layout_width="60dp"
+                android:layout_height="180dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="3dp"
+                android:background="@drawable/finger"
+                android:rotation="30"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/brawlerstop" />
+
+    <RelativeLayout
+        android:id="@+id/bonus_lay"
+        android:layout_width="50dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/nick"
+        android:background="@drawable/lvl_up">
+
+        <ProgressBar
+            android:id="@+id/bonus_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="43dp"
+            android:layout_height="7dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginBottom="1.5dp"
+            android:max="100"
+            android:progress="10"
+            android:progressDrawable="@drawable/line_progress"
+            android:secondaryProgress="80"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/bonus_image"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/big_box_icon" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/nick"
+        android:layout_width="70dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/iconss"
+        android:background="@drawable/nick"
+        android:fontFamily="@font/fontsbrawl"
+        android:gravity="center"
+        android:shadowColor="@android:color/black"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:text="Orest"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:id="@+id/iconss"
+        android:layout_width="70dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/nick">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="17dp"
+            android:background="@android:color/black" />
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/icons"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent" />
+
+    <LinearLayout
+        android:id="@+id/first_lay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rete_card"
+        android:layout_below="@+id/nick"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="110dp"
+        android:layout_marginRight="30dp">
+
+        <ImageView
+            android:id="@+id/free_case"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/free_case_new1"
+            android:layout_weight="10" />
+
+        <ImageView
+            android:id="@+id/video_case"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rete_card"
+            android:layout_below="@+id/nick"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/video_box"
+            android:layout_weight="10" />
+
+        <ImageView
+            android:id="@+id/normal_case"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rete_card"
+            android:layout_below="@+id/nick"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="10"
+            android:src="@drawable/normal_case_new1" />
+
+        <ImageView
+            android:id="@+id/big_case"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rete_card"
+            android:layout_below="@+id/nick"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="10"
+            android:src="@drawable/mega_case_new1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="92dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/brawlers"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_gravity="left"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/brawlers_new"
+                android:fontFamily="@font/fontsbrawl"
+                android:gravity="bottom|center_vertical|center_horizontal|center"
+                android:paddingRight="1dp"
+                android:paddingBottom="8dp"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:text="BRAWLERS"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/count_upgrade"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/count_point"
+                android:fontFamily="@font/fontsbrawl"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="2"
+                android:textColor="@android:color/white"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/shop"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_gravity="left"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/shop"
+                android:fontFamily="@font/fontsbrawl"
+                android:gravity="bottom|center_vertical|center_horizontal|center"
+                android:paddingRight="1dp"
+                android:paddingBottom="6dp"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:text="SHOP"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/new_icon"
+                android:layout_width="25dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/new_icon"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/achivements"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/achivments"
+            android:fontFamily="@font/fontsbrawl"
+            android:gravity="bottom|center_vertical|center_horizontal|center"
+            android:paddingRight="1dp"
+            android:paddingBottom="6.5dp"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="1"
+            android:text="ACHIVEMENTS"
+            android:textColor="@android:color/white"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/brawler_cur"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_below="@+id/mss"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/second_lay"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_above="@+id/rete_card"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="2dp"
+        android:layout_toLeftOf="@+id/play"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/free_case2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/video_case2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rete_card"
+            android:layout_below="@+id/nick"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/normal_case2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rete_card"
+            android:layout_below="@+id/nick"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:src="@drawable/normal_case_new1" />
+
+        <ImageView
+            android:id="@+id/big_case2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rete_card"
+            android:layout_below="@+id/nick"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:src="@drawable/mega_case_new1" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/fontsbrawl"
+        android:shadowColor="@android:color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:text="You don’t have anof gems"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/second_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="19dp"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/like_game_second"
+            android:layout_width="70dp"
+            android:layout_height="63dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/like_game"
+            android:fontFamily="@font/fontsbrawl"
+            android:gravity="bottom"
+            android:paddingBottom="5dp"
+            android:text="LIKE GAME?\10CLICK!"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="8sp" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/second_dinamiker"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sett_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:visibility="invisible">
+
+        <ImageView
+            android:layout_width="170dp"
+            android:layout_height="400dp"
+            android:layout_marginTop="-3dp"
+            android:background="@drawable/sett_list"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/sett_button"
+            android:layout_width="105dp"
+            android:layout_height="29dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/sett_button"
+            android:fontFamily="@font/fontsbrawl"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="7dp"
+            android:paddingBottom="2dp"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="1"
+            android:text="Change\10 View "
+            android:textColor="@android:color/white"
+            android:textSize="10sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/exit"
+            android:layout_width="105dp"
+            android:layout_height="29dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="75dp"
+            android:background="@drawable/quite_game"
+            android:fontFamily="@font/fontsbrawl"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="7dp"
+            android:paddingBottom="2dp"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="1"
+            android:text="Quit\10 Game "
+            android:textColor="@android:color/white"
+            android:textSize="10sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/sounds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="105dp"
+            android:fontFamily="@font/fontsbrawl"
+            android:gravity="center"
+            android:text="Sounds"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/sound_switch"
+            android:layout_width="90dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="130dp" />
+
+        <TextView
+            android:id="@+id/language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="160dp"
+            android:fontFamily="@font/fontsbrawl"
+            android:gravity="center"
+            android:text="Language"
+            android:textColor="@android:color/white" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="185dp">
+
+            <TextView
+                android:id="@+id/eng"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:background="@drawable/language"
+                android:fontFamily="@font/fontsbrawl"
+                android:gravity="center"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:text="Eng"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/ua"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="3dp"
+                android:background="@drawable/language"
+                android:fontFamily="@font/fontsbrawl"
+                android:gravity="center"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:text="UA"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/rus"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="3dp"
+                android:background="@drawable/language"
+                android:fontFamily="@font/fontsbrawl"
+                android:gravity="center"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:text="Rus"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textpolicy"
+            android:layout_width="142dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="215dp"
+            android:fontFamily="@font/fontsbrawl"
+            android:gravity="center"
+            android:text="This content is not affiliated, endorsed, sponsored or  specifically approved by Supercell and Supercell is not responsible for it. For more information, see the Supercell Fan Content Policy"
+            android:textColor="@android:color/white"
+            android:textSize="9dp" />
+
+        <TextView
+            android:id="@+id/policy"
+            android:layout_width="105dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/textpolicy"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/new_select"
+            android:fontFamily="@font/fontsbrawl"
+            android:gravity="center"
+            android:paddingBottom="3dp"
+            android:text="Fan Content Policy"
+            android:textColor="@android:color/white"
+            android:textSize="10dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/mss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="end"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/ticket"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/ticket_new"
+            android:gravity="center"
+            android:text="20"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:fontFamily="@font/fontsbrawl" />
+
+        <TextView
+            android:id="@+id/coins"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/coin_two_new"
+            android:gravity="center"
+            android:text="20"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:fontFamily="@font/fontsbrawl" />
+
+        <TextView
+            android:id="@+id/gems"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/gems_two_new"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:fontFamily="@font/fontsbrawl" />
+
+        <ImageView
+            android:id="@+id/settings"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:src="@drawable/settings" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_chest"
+    android:orientation="vertical">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.175"
+        android:background="@drawable/ideal_back_fourth" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/brawlerstop" />
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:background="@drawable/back_to_home" />
+
+    <ImageButton
+        android:id="@+id/home"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="end"
+        android:background="@drawable/home" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="top"
+        android:fontFamily="@font/fontsbrawl"
+        android:gravity="top"
+        android:shadowColor="@android:color/black"
+        android:shadowDx="8"
+        android:shadowDy="8"
+        android:shadowRadius="2"
+        android:text="PROFILE "
+        android:textColor="@android:color/white"
+        android:textSize="20dp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <RelativeLayout
+            android:id="@+id/ms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="top"
+                android:fontFamily="@font/fontsbrawl"
+                android:foregroundGravity="center"
+                android:gravity="top"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="8"
+                android:shadowDy="8"
+                android:shadowRadius="2"
+                android:text="MUSIC "
+                android:textColor="@android:color/white"
+                android:textSize="20dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

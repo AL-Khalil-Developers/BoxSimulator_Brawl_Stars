@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/brawlers"
+    android:orientation="vertical">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/fone_gif"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.175"
+        android:background="@drawable/ideal_back_fourth" />
+
+    <ImageView
+        android:id="@+id/scells"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.3"
+        android:background="@drawable/scells"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/change_nick"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.5"
+            android:background="@android:color/black" />
+
+        <RelativeLayout
+            android:id="@+id/inner_change"
+            android:layout_width="500dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/edit_fone">
+
+            <TextView
+                android:id="@+id/congrat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/fontsbrawl"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:text=" Welcome "
+                android:textColor="@android:color/white"
+                android:textSize="20dp" />
+
+            <RelativeLayout
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp">
+
+                <ImageView
+                    android:id="@+id/shester"
+                    android:layout_width="22dp"
+                    android:layout_height="23dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="6dp"
+                    android:background="@drawable/shester"
+                    android:visibility="invisible" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="60dp">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/edit" />
+
+                    <EditText
+                        android:id="@+id/nick"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/fontsbrawl"
+                        android:gravity="center"
+                        android:imeOptions="actionDone"
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/fontsbrawl"
+                    android:shadowColor="@android:color/black"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"
+                    android:text="Enter your nickname"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/ok"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/save"
+                    android:fontFamily="@font/fontsbrawl"
+                    android:gravity="center"
+                    android:paddingBottom="2dp"
+                    android:shadowColor="@android:color/black"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"
+                    android:text="Save"
+                    android:textColor="@android:color/white" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="15dp">
+
+                <TextView
+                    android:id="@+id/textpolicy"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/fontsbrawl"
+                    android:gravity="center"
+                    android:text="This content is not affiliated, endorsed, sponsored or  specifically approved by Supercell and Supercell is not responsible for it. For more information, see the Supercell Fan Content Policy: www.supercell.com/fan-content-policy"
+                    android:textColor="@android:color/white"
+                    android:textSize="11dp" />
+
+                <TextView
+                    android:id="@+id/policy"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/textpolicy"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/new_select"
+                    android:fontFamily="@font/fontsbrawl"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="3dp"
+                    android:text="Fan Content Policy"
+                    android:textColor="@android:color/white"
+                    android:textSize="11dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

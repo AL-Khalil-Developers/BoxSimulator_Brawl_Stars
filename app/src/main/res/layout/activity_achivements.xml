@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_chest"
+    android:orientation="vertical">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/fone_gif"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.175"
+        android:background="@drawable/ideal_back_fourth" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ach_recycler"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="-8dp"
+        android:paddingTop="16dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/brawlerstop" />
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:background="@drawable/back_to_home" />
+
+    <ImageButton
+        android:id="@+id/home"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/home" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="-8dp"
+        android:layout_toRightOf="@+id/back"
+        android:fontFamily="@font/fontsbrawl"
+        android:shadowColor="@android:color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:text="ACHIVEMENTS"
+        android:textColor="@android:color/white"
+        android:textSize="23dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="60dp">
+
+        <TextView
+            android:id="@+id/coins"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/coin_two"
+            android:gravity="center"
+            android:text="20"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            app:fontFamily="@font/fontsbrawl" />
+
+        <TextView
+            android:id="@+id/gems"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/gems_two"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            app:fontFamily="@font/fontsbrawl" />
+    </LinearLayout>
+</RelativeLayout>

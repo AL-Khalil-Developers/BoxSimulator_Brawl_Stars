@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/back_lay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/brawlers"
+    android:orientation="vertical">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.175"
+        android:background="@drawable/ideal_back_fourth" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/brawlerstop" />
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:background="@drawable/back_to_home" />
+
+    <ImageButton
+        android:id="@+id/home"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="end"
+        android:background="@drawable/home" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginLeft="32dp"
+        android:layout_toRightOf="@+id/back"
+        android:fontFamily="@font/fontsbrawl"
+        android:gravity="top"
+        android:shadowColor="@android:color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:text="PROFILE "
+        android:textColor="@android:color/white"
+        android:textSize="20dp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <RelativeLayout
+            android:id="@+id/iconback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <RelativeLayout
+                android:id="@+id/iconbacks"
+                android:layout_width="90dp"
+                android:layout_height="90dp">
+
+                <RelativeLayout
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/black">
+
+                    <ImageView
+                        android:id="@+id/icon"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/shelly_i" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/sett" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/nick"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/iconbacks"
+                android:background="@drawable/nick_edit"
+                android:fontFamily="@font/fontsbrawl"
+                android:gravity="center"
+                android:paddingTop="2dp"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="1"
+                android:text="OREST"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/nick_color"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="18dp"
+                android:layout_toRightOf="@+id/nick"
+                android:background="@drawable/name_color"
+                android:fontFamily="@font/fontsbrawl"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:text="nick color"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iconback"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/name_free"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/free_case"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/fontsbrawl"
+                android:gravity="center"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="OPEN BOXES"
+                android:textColor="@android:color/white"
+                android:textSize="9sp" />
+
+            <TextView
+                android:id="@+id/free_case"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@drawable/open_boxes"
+                android:fontFamily="@font/fontsbrawl"
+                android:paddingLeft="52dp"
+                android:paddingTop="22dp"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="1"
+                android:text="10"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/normal_case"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/free_case"
+                android:background="@drawable/open_big_box"
+                android:fontFamily="@font/fontsbrawl"
+                android:paddingLeft="52dp"
+                android:paddingTop="22dp"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="1"
+                android:text="10"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/name_normal"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/free_case"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/free_case"
+                android:fontFamily="@font/fontsbrawl"
+                android:gravity="center"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="OPEN BIG BOXES"
+                android:textColor="@android:color/white"
+                android:textSize="9sp" />
+
+            <TextView
+                android:id="@+id/open_mega_box"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/normal_case"
+                android:background="@drawable/open_mega_box"
+                android:fontFamily="@font/fontsbrawl"
+                android:paddingLeft="52dp"
+                android:paddingTop="22dp"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="1"
+                android:text="10"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/name_mega"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/free_case"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/normal_case"
+                android:fontFamily="@font/fontsbrawl"
+                android:gravity="center"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="OPEN MEGA BOXES"
+                android:textColor="@android:color/white"
+                android:textSize="9sp" />
+
+            <TextView
+                android:id="@+id/all_boxes"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/free_case"
+                android:background="@drawable/open_all_boxes"
+                android:fontFamily="@font/fontsbrawl"
+                android:paddingLeft="52dp"
+                android:paddingTop="22dp"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="1"
+                android:text="10"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/name_all"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/all_boxes"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/fontsbrawl"
+                android:gravity="center"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="OPEN ALL BOXES"
+                android:textColor="@android:color/white"
+                android:textSize="9sp" />
+
+            <TextView
+                android:id="@+id/collected_coins"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/open_mega_box"
+                android:layout_toRightOf="@+id/all_boxes"
+                android:background="@drawable/collected_coins"
+                android:fontFamily="@font/fontsbrawl"
+                android:paddingLeft="52dp"
+                android:paddingTop="22dp"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="1"
+                android:text="10"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/collected_gems"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/open_mega_box"
+                android:layout_toRightOf="@+id/collected_coins"
+                android:background="@drawable/collected_gems"
+                android:fontFamily="@font/fontsbrawl"
+                android:paddingLeft="52dp"
+                android:paddingTop="22dp"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="1"
+                android:text="10"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/name_coins"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/all_boxes"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/all_boxes"
+                android:fontFamily="@font/fontsbrawl"
+                android:gravity="center"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="COLLECTED COINS"
+                android:textColor="@android:color/white"
+                android:textSize="9sp" />
+
+            <TextView
+                android:id="@+id/collected_stars"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/all_boxes"
+                android:background="@drawable/collected_starpoinst"
+                android:fontFamily="@font/fontsbrawl"
+                android:paddingLeft="52dp"
+                android:paddingTop="22dp"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="1"
+                android:text="10"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/name_gems"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/all_boxes"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/collected_coins"
+                android:fontFamily="@font/fontsbrawl"
+                android:gravity="center"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="COLLECTED GEMS"
+                android:textColor="@android:color/white"
+                android:textSize="9sp" />
+
+            <TextView
+                android:id="@+id/collected_tickets"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/all_boxes"
+                android:layout_toRightOf="@+id/collected_stars"
+                android:background="@drawable/collected_tickets"
+                android:fontFamily="@font/fontsbrawl"
+                android:paddingLeft="52dp"
+                android:paddingTop="22dp"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="1"
+                android:text="10"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/name_star"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/collected_stars"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/fontsbrawl"
+                android:gravity="center"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="COLLECTED STARS"
+                android:textColor="@android:color/white"
+                android:textSize="9sp" />
+
+            <TextView
+                android:id="@+id/name_tickets"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/collected_stars"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/all_boxes"
+                android:fontFamily="@font/fontsbrawl"
+                android:gravity="center"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="COLLECTED COINS"
+                android:textColor="@android:color/white"
+                android:textSize="9sp" />
+
+            <TextView
+                android:id="@+id/name_brawlers"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/collected_stars"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/collected_tickets"
+                android:fontFamily="@font/fontsbrawl"
+                android:gravity="center"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="OPEN BRAWLERS"
+                android:textColor="@android:color/white"
+                android:textSize="9sp" />
+
+            <TextView
+                android:id="@+id/open_brawlers"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/all_boxes"
+                android:layout_toRightOf="@+id/collected_tickets"
+                android:background="@drawable/open_brawlers"
+                android:fontFamily="@font/fontsbrawl"
+                android:paddingLeft="52dp"
+                android:paddingTop="22dp"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="1"
+                android:text="10"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/change_nick"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.8"
+            android:background="@android:color/black" />
+
+        <RelativeLayout
+            android:id="@+id/inner_change"
+            android:layout_width="210dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/edit_fone">
+
+            <ImageView
+                android:id="@+id/shester"
+                android:layout_width="22dp"
+                android:layout_height="23dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/shester"
+                android:visibility="invisible" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/edit" />
+
+                <EditText
+                    android:id="@+id/nick_edittext"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/fontsbrawl"
+                    android:gravity="center"
+                    android:hint="Nickname"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/titles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/fontsbrawl"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:text="Change nickname"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/second_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/fontsbrawl"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:text="Enter your nickname"
+                android:textColor="@android:color/white" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/cancel"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/cancle"
+                    android:fontFamily="@font/fontsbrawl"
+                    android:gravity="center"
+                    android:paddingBottom="2dp"
+                    android:shadowColor="@android:color/black"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"
+                    android:text="Cancel"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/save"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/save"
+                    android:fontFamily="@font/fontsbrawl"
+                    android:gravity="center"
+                    android:paddingBottom="2dp"
+                    android:shadowColor="@android:color/black"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"
+                    android:text="Save"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lay_color"
+        android:layout_width="260dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/edit_fone"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/fontsbrawl"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="2"
+            android:text="Change nickname color"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/white"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/nick_color"
+                android:fontFamily="@font/fontsbrawl"
+                android:gravity="center"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:text="nickname"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/white_blue"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/nick_color"
+                android:fontFamily="@font/fontsbrawl"
+                android:gravity="center"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:text="nickname"
+                android:textColor="@color/white_blue_nick" />
+
+            <TextView
+                android:id="@+id/white_green"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/nick_color"
+                android:fontFamily="@font/fontsbrawl"
+                android:gravity="center"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:text="nickname"
+                android:textColor="@color/white_green_nick" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/first"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/salat"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/nick_color"
+                android:fontFamily="@font/fontsbrawl"
+                android:gravity="center"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:text="nickname"
+                android:textColor="@color/salat" />
+
+            <TextView
+                android:id="@+id/yellow"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/nick_color"
+                android:fontFamily="@font/fontsbrawl"
+                android:gravity="center"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:text="nickname"
+                android:textColor="@color/white_yellow_nick" />
+
+            <TextView
+                android:id="@+id/orange"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/nick_color"
+                android:fontFamily="@font/fontsbrawl"
+                android:gravity="center"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:text="nickname"
+                android:textColor="@color/white_orange_nick" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/second"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/red"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/nick_color"
+                android:fontFamily="@font/fontsbrawl"
+                android:gravity="center"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:text="nickname"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:id="@+id/pink"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/nick_color"
+                android:fontFamily="@font/fontsbrawl"
+                android:gravity="center"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:text="nickname"
+                android:textColor="@color/white_pink_nick" />
+
+            <TextView
+                android:id="@+id/purple"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/nick_color"
+                android:fontFamily="@font/fontsbrawl"
+                android:gravity="center"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:text="nickname"
+                android:textColor="@color/purple" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -11,6 +11,7 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -27,6 +28,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.reward.RewardedVideoAd;
+import com.unity3d.ads.UnityAds;
 //import com.google.android.gms.internal.ads.C1592af;
 import java.util.ArrayList;
 import java.util.Locale;
@@ -604,7 +606,21 @@ public class MainActivity extends AppCompatActivity {
 
         boolean z;
         super.onCreate(bundle);
+
+        UnityAds.initialize(MainActivity.this,UnityAdsConfig.UnityAdsAppID,UnityAdsConfig.TestModeON);
+
         setContentView(R.layout.activity_main);
+        UnityAds.initialize(MainActivity.this,UnityAdsConfig.UnityAdsAppID,UnityAdsConfig.TestModeON);
+        Handler adHandler = new Handler();
+        adHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                UnityAdsConfig.loadUnityInterstitialAd();
+            }
+        },3000);
+
+
+
         getWindow().setFlags(1024, 1024);
         f4140aK = (ImageView) findViewById(R.id.new_icon);
         ActivityManager.MemoryInfo memoryInfo = new ActivityManager.MemoryInfo();
@@ -1510,7 +1526,31 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent;
                     MainActivity.this.mo3390e();
                     ChestOpen.f3843x = R.drawable.mega_box;
-                    MainActivity.this.f4180aQ.loadAd("ca-app-pub-3940256099942544/5224354917", new AdRequest.Builder().build());
+                    if (UnityAds.isReady(UnityAdsConfig.UnityInterstitialAdPlacement)){
+                        MainActivity.m3720a(MainActivity.m3726c("chest") + 1, "chest");
+                        UnityAdsConfig.showUnityInterstitialAd(MainActivity.this);
+                        intent = new Intent(MainActivity.this, ChestOpen.class);
+                    }else {
+                        MainActivity.f4155y.startAnimation(MainActivity.f4149r);
+                        if (MainActivity.m3726c("sounds") == 0) {
+                            MediaPlayer.create(MainActivity.this.getApplicationContext(), (int) R.raw.error).start();
+                        }
+                        if (MainActivity.m3726c("language") == 0) {
+                            MainActivity mainActivity = MainActivity.this;
+                            mainActivity.mo3563a(mainActivity.f4185ae, "TRY AGAIN");
+                        }
+                        if (MainActivity.m3726c("language") == 1) {
+                            MainActivity mainActivity2 = MainActivity.this;
+                            mainActivity2.mo3563a(mainActivity2.f4185ae, "СПРОБУЙ ЗНОВУ");
+                        }
+                        if (MainActivity.m3726c("language") == 2) {
+                            MainActivity mainActivity3 = MainActivity.this;
+                            mainActivity3.mo3563a(mainActivity3.f4185ae, "ПОВТОРИТЕ ПОПЫТКУ");
+                            return;
+                        }
+                        return;
+                    }
+                   /* MainActivity.this.f4180aQ.loadAd("ca-app-pub-3940256099942544/5224354917", new AdRequest.Builder().build());
                     if (MainActivity.this.f4180aQ.isLoaded()) {
                         MainActivity.m3720a(MainActivity.m3726c("chest") + 1, "chest");
                         MainActivity.this.f4180aQ.show();
@@ -1541,7 +1581,7 @@ public class MainActivity extends AppCompatActivity {
                             }
                             return;
                         }
-                    }
+                    }*/
                     MainActivity.this.startActivity(intent);
                     MainActivity.f4135Z = "video";
                 }
@@ -1553,7 +1593,34 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent;
                     MainActivity.this.mo3390e();
                     ChestOpen.f3843x = R.drawable.mega_box;
-                    MainActivity.this.f4180aQ.loadAd("ca-app-pub-3940256099942544/5224354917", new AdRequest.Builder().build());
+
+                    if (UnityAds.isReady(UnityAdsConfig.UnityInterstitialAdPlacement)){
+                        MainActivity.m3720a(MainActivity.m3726c("chest") + 1, "chest");
+                        UnityAds.show(MainActivity.this,UnityAdsConfig.UnityInterstitialAdPlacement);
+                        intent = new Intent(MainActivity.this, ChestOpen.class);
+                    }else{
+                        MainActivity.f4155y.startAnimation(MainActivity.f4149r);
+                        if (MainActivity.m3726c("sounds") == 0) {
+                            MediaPlayer.create(MainActivity.this.getApplicationContext(), (int) R.raw.error).start();
+                        }
+                        if (MainActivity.m3726c("language") == 0) {
+                            MainActivity mainActivity = MainActivity.this;
+                            mainActivity.mo3563a(mainActivity.f4185ae, "TRY AGAIN");
+                        }
+                        if (MainActivity.m3726c("language") == 1) {
+                            MainActivity mainActivity2 = MainActivity.this;
+                            mainActivity2.mo3563a(mainActivity2.f4185ae, "СПРОБУЙ ЗНОВУ");
+                        }
+                        if (MainActivity.m3726c("language") == 2) {
+                            MainActivity mainActivity3 = MainActivity.this;
+                            mainActivity3.mo3563a(mainActivity3.f4185ae, "ПОВТОРИТЕ ПОПЫТКУ");
+                            return;
+                        }
+
+                        UnityAds.load(UnityAdsConfig.UnityInterstitialAdPlacement);
+                        return;
+                    }
+                   /* MainActivity.this.f4180aQ.loadAd("ca-app-pub-3940256099942544/5224354917", new AdRequest.Builder().build());
                     if (MainActivity.this.f4180aQ.isLoaded()) {
                         MainActivity.m3720a(MainActivity.m3726c("chest") + 1, "chest");
                         MainActivity.this.f4180aQ.show();
@@ -1584,7 +1651,7 @@ public class MainActivity extends AppCompatActivity {
                             }
                             return;
                         }
-                    }
+                    }*/
                     MainActivity.this.startActivity(intent);
                     MainActivity.f4135Z = "video";
                 }
@@ -2084,7 +2151,31 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent;
                 MainActivity.this.mo3390e();
                 ChestOpen.f3843x = R.drawable.mega_box;
-                MainActivity.this.f4180aQ.loadAd("ca-app-pub-3940256099942544/5224354917", new AdRequest.Builder().build());
+                if (UnityAds.isReady(UnityAdsConfig.UnityInterstitialAdPlacement)){
+                    MainActivity.m3720a(MainActivity.m3726c("chest") + 1, "chest");
+                    UnityAdsConfig.showUnityInterstitialAd(MainActivity.this);
+                    intent = new Intent(MainActivity.this, ChestOpen.class);
+                }else {
+                    MainActivity.f4155y.startAnimation(MainActivity.f4149r);
+                    if (MainActivity.m3726c("sounds") == 0) {
+                        MediaPlayer.create(MainActivity.this.getApplicationContext(), (int) R.raw.error).start();
+                    }
+                    if (MainActivity.m3726c("language") == 0) {
+                        MainActivity mainActivity = MainActivity.this;
+                        mainActivity.mo3563a(mainActivity.f4185ae, "TRY AGAIN");
+                    }
+                    if (MainActivity.m3726c("language") == 1) {
+                        MainActivity mainActivity2 = MainActivity.this;
+                        mainActivity2.mo3563a(mainActivity2.f4185ae, "СПРОБУЙ ЗНОВУ");
+                    }
+                    if (MainActivity.m3726c("language") == 2) {
+                        MainActivity mainActivity3 = MainActivity.this;
+                        mainActivity3.mo3563a(mainActivity3.f4185ae, "ПОВТОРИТЕ ПОПЫТКУ");
+                        return;
+                    }
+                    return;
+                }
+               /* MainActivity.this.f4180aQ.loadAd("ca-app-pub-3940256099942544/5224354917", new AdRequest.Builder().build());
                 if (MainActivity.this.f4180aQ.isLoaded()) {
                     MainActivity.m3720a(MainActivity.m3726c("chest") + 1, "chest");
                     MainActivity.this.f4180aQ.show();
@@ -2115,7 +2206,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                         return;
                     }
-                }
+                }*/
                 MainActivity.this.startActivity(intent);
                 MainActivity.f4135Z = "video";
             }
@@ -2127,7 +2218,31 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent;
                 MainActivity.this.mo3390e();
                 ChestOpen.f3843x = R.drawable.mega_box;
-                MainActivity.this.f4180aQ.loadAd("ca-app-pub-3940256099942544/5224354917", new AdRequest.Builder().build());
+                if (UnityAds.isReady(UnityAdsConfig.UnityInterstitialAdPlacement)){
+                    MainActivity.m3720a(MainActivity.m3726c("chest") + 1, "chest");
+                    UnityAds.show(MainActivity.this,UnityAdsConfig.UnityInterstitialAdPlacement);
+                    intent = new Intent(MainActivity.this, ChestOpen.class);
+                }else {
+                    MainActivity.f4155y.startAnimation(MainActivity.f4149r);
+                    if (MainActivity.m3726c("sounds") == 0) {
+                        MediaPlayer.create(MainActivity.this.getApplicationContext(), (int) R.raw.error).start();
+                    }
+                    if (MainActivity.m3726c("language") == 0) {
+                        MainActivity mainActivity = MainActivity.this;
+                        mainActivity.mo3563a(mainActivity.f4185ae, "TRY AGAIN");
+                    }
+                    if (MainActivity.m3726c("language") == 1) {
+                        MainActivity mainActivity2 = MainActivity.this;
+                        mainActivity2.mo3563a(mainActivity2.f4185ae, "СПРОБУЙ ЗНОВУ");
+                    }
+                    if (MainActivity.m3726c("language") == 2) {
+                        MainActivity mainActivity3 = MainActivity.this;
+                        mainActivity3.mo3563a(mainActivity3.f4185ae, "ПОВТОРИТЕ ПОПЫТКУ");
+                        return;
+                    }
+                    return;
+                }
+               /* MainActivity.this.f4180aQ.loadAd("ca-app-pub-3940256099942544/5224354917", new AdRequest.Builder().build());
                 if (MainActivity.this.f4180aQ.isLoaded()) {
                     MainActivity.m3720a(MainActivity.m3726c("chest") + 1, "chest");
                     MainActivity.this.f4180aQ.show();
@@ -2158,7 +2273,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                         return;
                     }
-                }
+                }*/
                 MainActivity.this.startActivity(intent);
                 MainActivity.f4135Z = "video";
             }
@@ -2278,5 +2393,12 @@ public class MainActivity extends AppCompatActivity {
     /* access modifiers changed from: protected */
     public void onRestart() {
         super.onRestart();
+    }
+
+
+    @Override
+    protected void onResume() {
+        UnityAds.load(UnityAdsConfig.UnityInterstitialAdPlacement);
+        super.onResume();
     }
 }

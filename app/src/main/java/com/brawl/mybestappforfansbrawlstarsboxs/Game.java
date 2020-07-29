@@ -7,6 +7,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.ArrayList;
 
 @SuppressWarnings("ALL")
@@ -92,6 +93,7 @@ public class Game extends AppCompatActivity {
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(R.layout.activity_game);
+
         f4024o = new ArrayList<>();
         f4021k = (RecyclerView) findViewById(R.id.you_got_rec);
         f4026q = (RelativeLayout) findViewById(R.id.need_lay);

@@ -14,6 +14,13 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.ads.mediation.AbstractAdViewAdapter;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -79,6 +86,8 @@ public class MiniGameSelector extends AppCompatActivity {
 
     /* renamed from: z */
     ScaleAnimation f4275z;
+    private InterstitialAd f4179aP;
+    private AbstractAdViewAdapter f4180aQ;
 
     /* JADX WARNING: Code restructure failed: missing block: B:18:0x008d, code lost:
         if (com.brawl.mybestappforfansbrawlstarsboxs.MainActivity.m3726c("sounds") == 0) goto L_0x0108;
@@ -144,6 +153,21 @@ public class MiniGameSelector extends AppCompatActivity {
         setContentView(R.layout.activity_mini_game_selector);
         getWindow().setFlags(1024, 1024);
         MainActivity.m3727c(this);
+
+        MobileAds.initialize(this, getResources().getString(R.string.admob_app_id));
+        this.f4179aP = new InterstitialAd(this);
+        this.f4179aP.setAdUnitId(getResources().getString(R.string.admob_interstitial_ad_unit_id));
+
+        f4179aP.setAdListener(new AdListener(){
+            @Override
+            public void onAdLoaded() {
+                super.onAdLoaded();
+                f4179aP.show();
+            }
+        });
+
+        f4179aP.loadAd(new AdRequest.Builder().build());
+
         this.f4265p = AnimationUtils.loadAnimation(this, R.anim.pow_up);
         this.f4261l = (ImageButton) findViewById(R.id.back);
         this.f4264o = (TextView) findViewById(R.id.title);

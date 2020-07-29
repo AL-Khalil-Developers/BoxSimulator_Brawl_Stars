@@ -20,6 +20,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
+
 import java.util.ArrayList;
 import pl.droidsonroids.gif.GifImageView;
 
@@ -268,6 +274,7 @@ public class BrawlerReview extends AppCompatActivity {
 
     /* renamed from: z */
     ArrayList<String> f3792z;
+    private InterstitialAd f4179aP;
 
     /* renamed from: a */
     private static void m3687a(ArrayList<ImageView> arrayList, int i) {
@@ -628,6 +635,19 @@ public class BrawlerReview extends AppCompatActivity {
         TextView textView;
         super.onCreate(bundle);
         setContentView(R.layout.rewiew);
+
+        MobileAds.initialize(this, getResources().getString(R.string.admob_app_id));
+        this.f4179aP = new InterstitialAd(this);
+        this.f4179aP.setAdUnitId(getResources().getString(R.string.admob_interstitial_ad_unit_id));
+        f4179aP.setAdListener(new AdListener(){
+            @Override
+            public void onAdClosed() {
+                super.onAdClosed();
+                f4179aP.loadAd(new AdRequest.Builder().build());
+            }
+        });
+        f4179aP.loadAd(new AdRequest.Builder().build());
+
         this.f3777az = 0;
         this.f3744aE = 0;
         this.f3746aG = new TranslateAnimation(0.0f, 1000.0f, 0.0f, 0.0f);
@@ -1190,6 +1210,7 @@ public class BrawlerReview extends AppCompatActivity {
                 if (MainActivity.m3726c("sounds") == 0) {
                     MediaPlayer.create(BrawlerReview.this.getApplicationContext(), (int) R.raw.menu_cancel).start();
                 }
+                f4179aP.show();
                 BrawlerReview.this.finish();
             }
         });
@@ -1437,6 +1458,7 @@ public class BrawlerReview extends AppCompatActivity {
             public final void onClick(View view) {
                 String str;
                 TextView textView;
+                f4179aP.show();
                 if (BrawlerReview.f3719X < 9) {
                     MainActivity.m3729d(BrawlerReview.this.f3735T, "money");
                     int parseInt = Integer.parseInt(BrawlerReview.this.f3735T.getText().toString());

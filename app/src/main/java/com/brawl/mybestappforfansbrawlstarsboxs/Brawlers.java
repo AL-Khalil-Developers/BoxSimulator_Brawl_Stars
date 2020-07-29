@@ -14,6 +14,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import pl.droidsonroids.gif.GifImageView;
@@ -77,8 +83,9 @@ public class Brawlers extends AppCompatActivity {
 
     /* renamed from: y */
     ImageView f3837y;
+    private InterstitialAd f4179aP;
 
-   // @Override // androidx.p038f.p039a.C0666e
+    // @Override // androidx.p038f.p039a.C0666e
     public static ArrayList m3694a(int i) {
         f3828u = new ArrayList<>();
         f3829v = new ArrayList<>();
@@ -207,6 +214,19 @@ public class Brawlers extends AppCompatActivity {
         setContentView(R.layout.activity_brawlers);
         getWindow().setFlags(1024, 1024);
         MainActivity.m3727c(this);
+
+        MobileAds.initialize(this, getResources().getString(R.string.admob_app_id));
+        this.f4179aP = new InterstitialAd(this);
+        this.f4179aP.setAdUnitId(getResources().getString(R.string.admob_interstitial_ad_unit_id));
+        f4179aP.setAdListener(new AdListener(){
+            @Override
+            public void onAdClosed() {
+                super.onAdClosed();
+                f4179aP.loadAd(new AdRequest.Builder().build());
+            }
+        });
+        f4179aP.loadAd(new AdRequest.Builder().build());
+
         f3830z = this;
         this.f3834t = (TextView) findViewById(R.id.brawlers);
         if (MainActivity.m3726c("language") == 0) {
@@ -218,6 +238,10 @@ public class Brawlers extends AppCompatActivity {
         if (MainActivity.m3726c("language") == 2) {
             this.f3834t.setText("Бойцы ");
         }
+
+
+
+
         this.f3835w = (TextView) findViewById(R.id.sort_button);
         this.f3831A = MainActivity.m3726c("sort");
         this.f3835w.setOnClickListener(new View.OnClickListener() {
@@ -253,6 +277,7 @@ public class Brawlers extends AppCompatActivity {
                 } catch (Exception unused) {
                 }
                 Brawlers.this.mo3390e();
+                f4179aP.show();
                 Brawlers.this.f3835w.startAnimation(Brawlers.f3822m);
             }
         });
@@ -287,6 +312,7 @@ public class Brawlers extends AppCompatActivity {
             /* class com.brawl.mybestappforfansbrawlstarsboxs.Brawlers.C09562 */
 
             public final void onClick(View view) {
+                f4179aP.show();
                 Brawlers.this.mo3391f();
                 Brawlers.this.finish();
             }
@@ -303,6 +329,7 @@ public class Brawlers extends AppCompatActivity {
             /* class com.brawl.mybestappforfansbrawlstarsboxs.Brawlers.C09573 */
 
             public final void onClick(View view) {
+                f4179aP.show();
                 Brawlers.this.mo3391f();
                 Brawlers.this.finish();
             }

@@ -71,7 +71,7 @@
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:screenOrientation="landscape"
-            android:value="ca-app-pub-5415344071963463~7794037101" />
+            android:value="@string/admob_app_id" />
 
         <activity
             android:name="com.brawl.mybestappforfansbrawlstarsboxs.Shop"

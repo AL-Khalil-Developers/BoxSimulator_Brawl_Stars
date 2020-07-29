@@ -24,6 +24,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
@@ -1098,9 +1100,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         f4130S = (TextView) findViewById(R.id.shop);
-        MobileAds.initialize(this, "ca-app-pub-5415344071963463~7794037101");
+        MobileAds.initialize(this, getResources().getString(R.string.admob_app_id));
         this.f4179aP = new InterstitialAd(this);
-        this.f4179aP.setAdUnitId("ca-app-pub-5415344071963463/8083673530");
+        this.f4179aP.setAdUnitId(getResources().getString(R.string.admob_interstitial_ad_unit_id));
+        f4179aP.setAdListener(new AdListener(){
+            @Override
+            public void onAdLoaded() {
+                super.onAdLoaded();
+                f4179aP.show();
+            }
+        });
+        f4179aP.loadAd(new AdRequest.Builder().build());
         f4135Z = "";
         f4141aO = getPreferences(4);
         if (!m3724b("skin_name").equals("")) {

@@ -629,7 +629,6 @@ public class MainActivity extends AppCompatActivity {
         interstitialAd.setAdListener(new InterstitialAdListener() {
             @Override
             public void onInterstitialDisplayed(Ad ad) {
-                interstitialAd.loadAd();
             }
 
             @Override
@@ -1354,6 +1353,9 @@ public class MainActivity extends AppCompatActivity {
                             MainActivity.this.mo3564a("com.brawl.mybestappforfansbrawlstarsboxs");
                             MainActivity.this.startActivity(new Intent(MainActivity.this, ChestOpen.class));
                             MainActivity.f4135Z = "free";
+                            if (interstitialAd.isAdLoaded()){
+                                interstitialAd.show();
+                            }
                         }
                     }
                 }
@@ -1378,6 +1380,9 @@ public class MainActivity extends AppCompatActivity {
                             MainActivity.this.mo3564a("com.brawl.mybestappforfansbrawlstarsboxs");
                             MainActivity.this.startActivity(new Intent(MainActivity.this, ChestOpen.class));
                             MainActivity.f4135Z = "free";
+                            if (interstitialAd.isAdLoaded()){
+                                interstitialAd.show();
+                            }
                         }
                     }
                 }
@@ -1936,6 +1941,9 @@ public class MainActivity extends AppCompatActivity {
                         MainActivity.this.mo3564a("com.brawl.mybestappforfansbrawlstarsboxs");
                         MainActivity.this.startActivity(new Intent(MainActivity.this, ChestOpen.class));
                         MainActivity.f4135Z = "free";
+                        if (interstitialAd.isAdLoaded()){
+                            interstitialAd.show();
+                        }
                     }
                 }
             }
@@ -1960,6 +1968,9 @@ public class MainActivity extends AppCompatActivity {
                         MainActivity.this.mo3564a("com.brawl.mybestappforfansbrawlstarsboxs");
                         MainActivity.this.startActivity(new Intent(MainActivity.this, ChestOpen.class));
                         MainActivity.f4135Z = "free";
+                        if (interstitialAd.isAdLoaded()){
+                            interstitialAd.show();
+                        }
                     }
                 }
             }

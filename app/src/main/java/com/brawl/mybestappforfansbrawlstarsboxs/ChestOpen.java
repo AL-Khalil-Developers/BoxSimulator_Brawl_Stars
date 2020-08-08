@@ -4,11 +4,13 @@ import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.app.ActivityManager;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
@@ -23,6 +25,12 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.facebook.ads.Ad;
+import com.facebook.ads.AdError;
+import com.facebook.ads.AudienceNetworkAds;
+import com.facebook.ads.InterstitialAd;
+import com.facebook.ads.InterstitialAdListener;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.RequestCreator;
 import java.util.ArrayList;
@@ -1695,10 +1703,56 @@ public class ChestOpen extends AppCompatActivity {
         }
     }
 
+    private  InterstitialAd interstitialAd;
+    private  int freeAdCount;
+
     @Override // androidx.core.app.C0523c, androidx.p038f.p039a.C0666e, androidx.appcompat.app.AppCompatActivity
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(R.layout.activity_chest_open);
+
+        AudienceNetworkAds.initialize(this);
+        interstitialAd = new InterstitialAd(this,FacebookAdsConfig.facebookInterstitialAdPlacement);
+        interstitialAd.setAdListener(new InterstitialAdListener() {
+            @Override
+            public void onInterstitialDisplayed(Ad ad) {
+
+            }
+
+            @Override
+            public void onInterstitialDismissed(Ad ad) {
+
+            }
+
+            @Override
+            public void onError(Ad ad, AdError adError) {
+
+            }
+
+            @Override
+            public void onAdLoaded(Ad ad) {
+                interstitialAd.show();
+            }
+
+            @Override
+            public void onAdClicked(Ad ad) {
+
+            }
+
+            @Override
+            public void onLoggingImpression(Ad ad) {
+
+            }
+        });
+        interstitialAd.loadAd();
+        Handler ad2Handler = new Handler();
+        ad2Handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                interstitialAd.loadAd();
+            }
+        },3000);
+
         this.f3918j = (GifImageView) findViewById(R.id.fone_gif);
         this.f3875aF = (RelativeLayout) findViewById(R.id.full_gadget_lay);
         this.f3877aH = (LinearLayout) findViewById(R.id.gadget_info_lay);

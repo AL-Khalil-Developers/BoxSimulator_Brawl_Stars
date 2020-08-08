@@ -151,6 +151,19 @@
             android:layout_marginTop="1dp"
             android:layout_marginRight="5dp"
             android:src="@drawable/big_box_icon" />
+
+        <TextView
+            android:id="@+id/coins"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/coin_two_new"
+            android:gravity="center"
+            android:text="20"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:fontFamily="@font/fontsbrawl" />
     </RelativeLayout>
 
     <TextView
@@ -643,19 +656,6 @@
             android:layout_marginLeft="16dp"
             android:layout_marginBottom="30dp"
             android:background="@drawable/ticket_new"
-            android:gravity="center"
-            android:text="20"
-            android:textColor="@android:color/white"
-            android:textSize="14sp"
-            app:fontFamily="@font/fontsbrawl" />
-
-        <TextView
-            android:id="@+id/coins"
-            android:layout_width="100dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginBottom="30dp"
-            android:background="@drawable/coin_two_new"
             android:gravity="center"
             android:text="20"
             android:textColor="@android:color/white"
